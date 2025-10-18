@@ -3,7 +3,14 @@ interface HeroContentProps {
     setNavButton: (button: string) => void;
 }
 
-const HeroContent = ({ navButton, setNavButton }: HeroContentProps) => {
+interface ListItem {
+    id: number;
+    name: string;
+    description: string;
+    specialRemark: string;
+}
+
+const HeroContent = ({ navButton }: HeroContentProps) => {
 
 
     const whatContent = {
@@ -40,7 +47,7 @@ const HeroContent = ({ navButton, setNavButton }: HeroContentProps) => {
             imageUrl: ""
         }
     }
-    const content: { [key: string]: { title: string, subtitle: string, content: any } } = { 'the_opportunity': whatContent, 'why': whyContent, 'about': aboutContent }
+    const content: { [key: string]: { title: string, subtitle: string, content: any } } = { 'the_opportunity': whatContent, 'about': aboutContent }
     const contentToShow = content[navButton];
 
     if (!contentToShow) return null;
@@ -79,7 +86,7 @@ const HeroContent = ({ navButton, setNavButton }: HeroContentProps) => {
                     <h1 className="text-xl font-semibold">Startup experience (3+years)</h1>
 
                     <div className="flex flex-col w-full rounded-lg gap-4 p-4">
-                        {contentToShow.content.listOfItems.map((item: any) => (
+                        {contentToShow.content.listOfItems.map((item: ListItem) => (
                             <div key={item.id} className="flex flex-col items-start justify-start w-full h-full gap-2">
                                 <div className="flex items-center w-full h-full gap-1">
                                     <h2 className="font-semibold">{item.name}</h2>
@@ -94,7 +101,7 @@ const HeroContent = ({ navButton, setNavButton }: HeroContentProps) => {
                 <div className="flex flex-col items-start justify-start w-full h-full gap-2">
                     <h1 className="text-xl font-semibold">Corporate experience (5+years)</h1>
                     <div className="w-full rounded-lg p-4">
-                        {contentToShow.content.listOfexperience.map((item: any) => (
+                        {contentToShow.content.listOfexperience.map((item: ListItem) => (
                             <div key={item.id} className="flex flex-col items-start justify-start w-full h-full gap-2 mb-4">
                                 <div className="flex items-center w-full h-full gap-1">
                                     <h2 className="font-semibold">{item.name}</h2>

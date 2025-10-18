@@ -3,24 +3,7 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { useRouter } from 'next/navigation';
-import {
-  CheckCircle,
-  Star,
-  Users,
-  Code,
-  Rocket,
-  Award,
-  ArrowRight,
-  Clock,
-  Calendar,
-  Zap,
-  Check
-} from 'lucide-react';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { Badge } from '@/components/ui/badge';
-import { Button } from '@/components/ui/button';
-import EmailForm from '@/components/EmailForm';
-import HeroSVG from '@/components/HeroSVG';
+import { CheckCircle } from 'lucide-react';
 import Hero from '@/components/Hero';
 import CTASection from '@/components/CTASection';
 import BootcampCard from '@/components/BootcampCard';
@@ -29,7 +12,6 @@ import { useEffect } from 'react';
 
 export default function Home() {
   const [showSuccess, setShowSuccess] = useState(false);
-  const router = useRouter();
 
   useEffect(() => {
     

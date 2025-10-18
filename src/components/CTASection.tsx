@@ -30,7 +30,7 @@ const CTASection = () => {
                 setApiResponse('');
             }
 
-        } catch (error) {
+        } catch (err) {
             setError('Something went wrong. Please try again.');
             setApiResponse('');
         }

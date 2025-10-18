@@ -1,4 +1,9 @@
-const HeroTitle = ({ navButton, setNavButton }: { navButton: any, setNavButton: any }) => {
+interface HeroTitleProps {
+    navButton: string;
+    setNavButton: (button: string) => void;
+}
+
+const HeroTitle = ({ navButton, setNavButton }: HeroTitleProps) => {
 
     return (
         <div className="flex items-center justify-center w-full  px-10 gap-10">

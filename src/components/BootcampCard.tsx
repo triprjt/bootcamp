@@ -1,12 +1,6 @@
 import { Badge } from "./ui/badge";
 
 const BootcampCard = () => {
-    const signUpButton = (
-        <div className="flex w-full h-full justify-center items-center">
-            <input type="email" placeholder="Enter your email" />
-            <button className="bg-yellow-500 text-white px-4 py-2 rounded-md">Sign Up</button>
-        </div>
-    )
     return (
         <div className="lg:px-30 px-10 sm:px-4 md:px-8 py-20 w-full">
             <h1 className="text-2xl font-bold text-start w-full mb-6    ">Upcoming Events</h1>

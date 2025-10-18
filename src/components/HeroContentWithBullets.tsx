@@ -45,23 +45,7 @@ const HeroContentWithBullets = () => {
             ]
         }
     ]
-    const [rowVisible, setRowVisible] = useState(false)
-    const [currentRow, setCurrentRow] = useState(0)
-    const handleScrollBehavior = () => {
-        if (window.scrollY > 100) {
-            setRowVisible(true)
-        } else {
-            setRowVisible(false)
-        }
-    }
 
-    const imp = "The most important skill in the future is the ability to think like a developer"
-    useEffect(() => {
-        window.addEventListener('scroll', handleScrollBehavior)
-        return () => {
-            window.removeEventListener('scroll', handleScrollBehavior)
-        }
-    }, [])
     const containerTitle = (id: number) => {
         const containerTitleContent = [{ id: 1, title: 'The shift' }, { id: 2, title: 'Take action' }, { id: 3, title: 'The framework' }, { id: 4, title: 'Testimonials' }]
         return <div className="text-xl flex items-center justify-center font-bold my-auto rounded-[20px] border border-indigo-200 px-2 py-1 gap-2">
